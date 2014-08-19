@@ -22,6 +22,10 @@
 		8F4227D119A2F4430022C34B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4227B519A2F4430022C34B /* CoreData.framework */; };
 		8F4227D919A2F4430022C34B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F4227D719A2F4430022C34B /* InfoPlist.strings */; };
 		8F4227DB19A2F4430022C34B /* Thousand_WordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4227DA19A2F4430022C34B /* Thousand_WordsTests.m */; };
+		8F4227E519A2F5E50022C34B /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4227E419A2F5E50022C34B /* Storyboard.storyboard */; };
+		8F4227E819A2F7910022C34B /* TWAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4227E719A2F7910022C34B /* TWAlbumTableViewController.m */; };
+		8F4227EB19A2FFA50022C34B /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4227EA19A2FFA50022C34B /* Album.m */; };
+		8F4227EE19A316080022C34B /* TWCoreDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4227ED19A316080022C34B /* TWCoreDateHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		8F4227D619A2F4430022C34B /* Thousand WordsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Thousand WordsTests-Info.plist"; sourceTree = "<group>"; };
 		8F4227D819A2F4430022C34B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F4227DA19A2F4430022C34B /* Thousand_WordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Thousand_WordsTests.m; sourceTree = "<group>"; };
+		8F4227E419A2F5E50022C34B /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		8F4227E619A2F7910022C34B /* TWAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWAlbumTableViewController.h; sourceTree = "<group>"; };
+		8F4227E719A2F7910022C34B /* TWAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWAlbumTableViewController.m; sourceTree = "<group>"; };
+		8F4227E919A2FFA50022C34B /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		8F4227EA19A2FFA50022C34B /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		8F4227EC19A316080022C34B /* TWCoreDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWCoreDateHelper.h; sourceTree = "<group>"; };
+		8F4227ED19A316080022C34B /* TWCoreDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWCoreDateHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +126,15 @@
 		8F4227B719A2F4430022C34B /* Thousand Words */ = {
 			isa = PBXGroup;
 			children = (
-				8F4227C019A2F4430022C34B /* TWAppDelegate.h */,
-				8F4227C119A2F4430022C34B /* TWAppDelegate.m */,
+				8F4227E419A2F5E50022C34B /* Storyboard.storyboard */,
+				8F4227E619A2F7910022C34B /* TWAlbumTableViewController.h */,
+				8F4227E719A2F7910022C34B /* TWAlbumTableViewController.m */,
+				8F4227EC19A316080022C34B /* TWCoreDateHelper.h */,
+				8F4227ED19A316080022C34B /* TWCoreDateHelper.m */,
 				8F4227C619A2F4430022C34B /* Images.xcassets */,
 				8F4227C319A2F4430022C34B /* Thousand_Words.xcdatamodeld */,
+				8F4227E919A2FFA50022C34B /* Album.h */,
+				8F4227EA19A2FFA50022C34B /* Album.m */,
 				8F4227B819A2F4430022C34B /* Supporting Files */,
 			);
 			path = "Thousand Words";
@@ -127,6 +143,8 @@
 		8F4227B819A2F4430022C34B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8F4227C019A2F4430022C34B /* TWAppDelegate.h */,
+				8F4227C119A2F4430022C34B /* TWAppDelegate.m */,
 				8F4227B919A2F4430022C34B /* Thousand Words-Info.plist */,
 				8F4227BA19A2F4430022C34B /* InfoPlist.strings */,
 				8F4227BD19A2F4430022C34B /* main.m */,
@@ -231,6 +249,7 @@
 			files = (
 				8F4227BC19A2F4430022C34B /* InfoPlist.strings in Resources */,
 				8F4227C719A2F4430022C34B /* Images.xcassets in Resources */,
+				8F4227E519A2F5E50022C34B /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +270,9 @@
 			files = (
 				8F4227BE19A2F4430022C34B /* main.m in Sources */,
 				8F4227C219A2F4430022C34B /* TWAppDelegate.m in Sources */,
+				8F4227E819A2F7910022C34B /* TWAlbumTableViewController.m in Sources */,
+				8F4227EE19A316080022C34B /* TWCoreDateHelper.m in Sources */,
+				8F4227EB19A2FFA50022C34B /* Album.m in Sources */,
 				8F4227C519A2F4430022C34B /* Thousand_Words.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
