@@ -9,6 +9,8 @@
 #import "TWAlbumTableViewController.h"
 #import "Album.h"
 #import "TWCoreDateHelper.h"
+#import "TWPhotoCollectionViewController.h"
+
 
 @interface TWAlbumTableViewController () <UIAlertViewDelegate>
 
@@ -169,15 +171,22 @@ cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"Album Chosen"]){
+        if([segue.destinationViewController isKindOfClass:[TWPhotoCollectionViewController class]]){
+            NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+            TWPhotoCollectionViewController *targetViewController = segue.destinationViewController;
+            targetViewController.album = self.albums[path.row];
+            
+        }
+    }
+    
 }
-*/
+
 
 @end

@@ -1,18 +1,13 @@
 //
-//  Album.m
+//  TWPictureDataTransformer.h
 //  Thousand Words
 //
 //  Created by yousheng chang on 8/22/14.
 //  Copyright (c) 2014 InfoTech Inc. All rights reserved.
 //
 
-#import "Album.h"
+#import <Foundation/Foundation.h>
 
-
-@implementation Album
-
-@dynamic date;
-@dynamic name;
-@dynamic photos;
+@interface TWPictureDataTransformer : NSValueTransformer
 
 @end
