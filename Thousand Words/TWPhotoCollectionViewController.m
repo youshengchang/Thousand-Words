@@ -11,6 +11,7 @@
 #import "Photo.h"
 #import "TWPictureDataTransformer.h"
 #import "TWCoreDateHelper.h"
+#import "TWPhotoDetailViewController.h"
 
 @interface TWPhotoCollectionViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (strong, nonatomic)NSMutableArray *photos;
@@ -54,16 +55,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"detailSegue"]){
+        if([segue.destinationViewController isKindOfClass:[TWPhotoDetailViewController class]]){
+            TWPhotoDetailViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems]lastObject];
+            
+            Photo *selectedPhoto = self.photos[indexPath.row];
+            targetViewController.photo = selectedPhoto;
+        }
+    }
 }
-*/
+
 #pragma mark - UICollectionViewDataSource
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
