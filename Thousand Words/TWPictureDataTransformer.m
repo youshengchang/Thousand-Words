@@ -22,12 +22,12 @@
 
 -(id)transformedValue:(id)value
 {
-    return UIImagePNGRepresentation(value);
+    return UIImagePNGRepresentation(value); //return NSData object
 }
 
 -(id)reverseTransformedValue:(id)value
 {
-    UIImage *image = [UIImage imageWithData:value];
+    UIImage *image = [UIImage imageWithData:value]; //return a image object
     return image;
 }
 @end

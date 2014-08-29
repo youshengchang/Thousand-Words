@@ -14,7 +14,7 @@
 #import "TWPhotoDetailViewController.h"
 
 @interface TWPhotoCollectionViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
-@property (strong, nonatomic)NSMutableArray *photos;
+@property (strong, nonatomic)NSMutableArray *photos; //UI Images
 
 @end
 
@@ -46,6 +46,18 @@
     NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
     NSArray *sortedPhotos = [unorderedPhotos sortedArrayUsingDescriptors:@[dateDescriptor]];
     self.photos = [sortedPhotos mutableCopy];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    NSSet *unorderedPhotos = self.album.photos;
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    NSArray *sortedPhotos = [unorderedPhotos sortedArrayUsingDescriptors:@[dateDescriptor]];
+    self.photos = [sortedPhotos mutableCopy];
+    
+    [self.collectionView reloadData];
     
 }
 
@@ -111,11 +123,13 @@
     photo.albumBook = self.album;
     NSError *error = nil;
     if(![[photo managedObjectContext] save:&error]){
+        //Error in saving
         NSLog(@"%@", error);
     }
     return photo;
     
 }
+
 #pragma mark - UIImagePickerControllerDelegate
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info

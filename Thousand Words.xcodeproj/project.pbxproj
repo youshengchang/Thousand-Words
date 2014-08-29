@@ -32,6 +32,7 @@
 		8F4227FC19A7F9B10022C34B /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4227FB19A7F9B10022C34B /* Photo.m */; };
 		8F42280019A7FAD30022C34B /* TWPictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4227FF19A7FAD30022C34B /* TWPictureDataTransformer.m */; };
 		8F42280319A80D180022C34B /* TWPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F42280219A80D180022C34B /* TWPhotoDetailViewController.m */; };
+		8F42280619B0FFF20022C34B /* TWFilterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F42280519B0FFF20022C34B /* TWFilterCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		8F4227FF19A7FAD30022C34B /* TWPictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPictureDataTransformer.m; sourceTree = "<group>"; };
 		8F42280119A80D180022C34B /* TWPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotoDetailViewController.h; sourceTree = "<group>"; };
 		8F42280219A80D180022C34B /* TWPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhotoDetailViewController.m; sourceTree = "<group>"; };
+		8F42280419B0FFF20022C34B /* TWFilterCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWFilterCollectionViewController.h; sourceTree = "<group>"; };
+		8F42280519B0FFF20022C34B /* TWFilterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWFilterCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 			children = (
 				8F4227FD19A7F9EF0022C34B /* CoreData */,
 				8F4227E419A2F5E50022C34B /* Storyboard.storyboard */,
+				8F42280419B0FFF20022C34B /* TWFilterCollectionViewController.h */,
+				8F42280519B0FFF20022C34B /* TWFilterCollectionViewController.m */,
 				8F42280119A80D180022C34B /* TWPhotoDetailViewController.h */,
 				8F42280219A80D180022C34B /* TWPhotoDetailViewController.m */,
 				8F4227F219A5AEAC0022C34B /* TWPhotoCollectionViewCell.h */,
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F4227BE19A2F4430022C34B /* main.m in Sources */,
+				8F42280619B0FFF20022C34B /* TWFilterCollectionViewController.m in Sources */,
 				8F42280019A7FAD30022C34B /* TWPictureDataTransformer.m in Sources */,
 				8F4227C219A2F4430022C34B /* TWAppDelegate.m in Sources */,
 				8F4227F419A5AEAC0022C34B /* TWPhotoCollectionViewCell.m in Sources */,
